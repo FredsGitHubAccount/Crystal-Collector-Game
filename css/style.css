@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    font-size: 42px;
+    background-image: url("swarbg.jpg");
+    background-size: 100%;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+img {
+    height: 175px;
+    width: 175px;
+
+}
+
+h1 {
+    font-size: 68px;
+    border-style: double;
+    border-width: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.resize {
+    height: 160px;
+}
+
+.gamecontainer {
+
+    background: rgb(53,53,61);
+    background: radial-gradient(circle, rgba(53,53,61,1) 0%, rgba(29,18,56,1) 48%, rgba(71,71,73,1) 93%);
+    opacity:.9;
+    margin: 200px auto;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.gamecontainer:hover{
+    opacity:1;
+}
+
+.winscolor {
+    color:green;
+}
+.lossescolor {
+    color: red;
+}

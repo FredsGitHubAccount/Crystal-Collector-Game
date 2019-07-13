@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diamond Game</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- CSS Sheet -->
+    <link rel="stylesheet" text="type/css" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container gamecontainer">
+
+    <!-- Header Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"><h1>Diamond Game</h1></div>
+    </div>
+</div>
+ 
+<!-- Directions Container -->
+    
+<div class="container">
+        <div class="row">
+            <div class="col-md-12"><h2 id="directions-text">Try To Match The Target Score By Clicking The Mysterious Gems!</h2></div>
+        </div>
+    </div>
+     
+    <!-- Wins & Losses Container -->
+    <div class="container borderwl">
+            <div class="row">
+                <div class="col-md-6 winscolor"><p id="wins-total">Wins : 0</p></div>
+                <div class="col-md-6 lossescolor"><p id="losses-total">Losses : 0</p></div>
+            </div>
+    </div>
+    <!-- Target Score Container -->
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12"><p id="target-score">Target Score : ???</p></div>
+            </div>
+        </div>
+<!-- Total-Score Container -->
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12"><p id="total-score">Total Score : 0</p></div>
+                </div>
+            </div>
+    
+
+
+        <!-- Image Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"><div id="button-1" class="btn-score"><img class="img-fluid" src="bluegem.png"></div></div>
+            <div class="col-md-3"><div id="button-2" class="btn-score"><img class="img-fluid" src="redgem.png"></div></div>
+            <div class="col-md-3"><div id="button-3" class="btn-score"><img class="img-fluid" src="greengem.png"></div></div>
+            <div class="col-md-3"><div id="button-4" class="btn-score"><img class="img-fluid resize" src="purplegem.png"></div></div>
+        </div>
+    </div>
+
+
+    
+ <!-- Popup container -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"><div id="popup" class="btn-score"></div></div>
+    </div>
+</div>
+    
+   
+
+</div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
