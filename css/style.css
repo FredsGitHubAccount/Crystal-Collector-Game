@@ -1,8 +1,8 @@
 body {
     text-align: center;
     font-size: 42px;
-    background-image: url("swarbg.jpg");
-    background-size: 100%;
+    background-image: url("../images/swarbg.jpg");
+    background-size: 100% 1000px;
     color: white;
     font-family: 'Questrial', sans-serif;
 
@@ -30,7 +30,7 @@ h1 {
     background: rgb(53,53,61);
     background: radial-gradient(circle, rgba(53,53,61,1) 0%, rgba(29,18,56,1) 48%, rgba(71,71,73,1) 93%);
     opacity:.9;
-    margin: 200px auto;
+    margin: 150px auto;
     padding: 25px;
     border-radius: 25px;
 }
