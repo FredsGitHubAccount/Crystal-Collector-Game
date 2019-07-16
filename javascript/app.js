@@ -45,7 +45,7 @@ console.log(totalScore);
 
 if  (totalScore === targetScore) {
     $("#target-score").text(targetScore);
-    $("#popup").text(`Good Job! Your ${totalScore} was and you needed ${targetScore}!`);
+    $("#popup").text(`Good Job! Your Total Score Matched The Target Score!`);
     alert("You win!")
     wins++;
     $("#wins-total").text(wins);
@@ -59,7 +59,6 @@ if  (totalScore === targetScore) {
         alert("You lose!");
         losses++;
         $("#losses-total").text(losses);
-
         startGame();
 
     }
