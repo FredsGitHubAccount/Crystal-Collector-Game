@@ -10,13 +10,14 @@ let targetScore = 0;
 
 function startGame() {
 
-    totalScore = 0;
+totalScore = 0;
 
 targetScore = Math.floor(Math.random() * 101) + 19;
 $("#total-score").text(`Total Score : ${totalScore}`);
 $("#wins-total").text(`Wins : ${wins}`);
 $("#losses-total").text(`Losses : ${losses}`);
 $("#target-score").text(`Target Score : ${targetScore}`);
+
 
 
 buttonValues = [];
@@ -46,7 +47,7 @@ console.log(totalScore);
 if  (totalScore === targetScore) {
     $("#target-score").text(targetScore);
     $("#popup").text(`Good Job! Your Total Score Matched The Target Score!`);
-    alert("You win!")
+    alert("You Lose! Hit Space To Begin The Next Round")
     wins++;
     $("#wins-total").text(wins);
     startGame();
@@ -55,8 +56,8 @@ if  (totalScore === targetScore) {
 
     else if (totalScore > targetScore) {
         $("#target-score").text(targetScore);
-        $("#popup").text(`Nice try, your guess was ${totalScore} and you needed ${targetScore}!`);
-        alert("You lose!");
+        $("#popup").text(`Nice Try, Your Guess Was ${totalScore}! You needed ${targetScore}!`);
+        alert("You Lose! Hit Space To Begin The Next Round");
         losses++;
         $("#losses-total").text(losses);
         startGame();
@@ -66,12 +67,12 @@ if  (totalScore === targetScore) {
 
 
 function completeChecker() {
-    if (wins === 2) {
-        alert(`You are a guess master!`)
+    if (wins === 5) {
+        alert(`You Are A Guess Master!`)
         $("#popup").text(`Click A Gem To Play Again!`);
         freshStart();
     }
-    else if (losses === 2) {
+    else if (losses === 5) {
         alert("Better Luck Next Time")
         $("#popup").text(`Click A Gem To Play Again!`);
         freshStart();
@@ -84,7 +85,7 @@ function freshStart() {
     losses = 0;
 $("#wins-total").text(`Wins : ${wins}`);
 $("#losses-total").text(`Losses : ${losses}`);
-$("#directions-text").text(`Try To Match The Target Score By Clicking The Mysterious Gems!`);
+$("#directions-text").html(`Match The Target Score By Clicking The Mysterious Gems! <br> Try To Get To 5 Wins Before 5 Losses!`);
 
 }
 
