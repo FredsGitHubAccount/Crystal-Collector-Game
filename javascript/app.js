@@ -23,7 +23,7 @@ function startGame() {
     $("#target-score").text(`Target Score : ${targetScore}`);
 
 
-// assign attributes for each crystal by using a four loop
+    // assign attributes for each crystal by using a four loop
     buttonValues = [];
     for (let i = 0; i < 4; i++) {
 
@@ -50,7 +50,7 @@ function scoreUpdate() {
     $("#popup").text(``);
     console.log(totalScore);
 
-        // win condition
+    // win condition
     if (totalScore === targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Good Job! Your Total Score Matched The Target Score!`);
@@ -60,7 +60,7 @@ function scoreUpdate() {
         startGame();
 
     }
-        // lose condition
+    // lose condition
     else if (totalScore > targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Nice Try, Your Guess Was ${totalScore}! You needed ${targetScore}!`);
@@ -72,7 +72,7 @@ function scoreUpdate() {
     }
 }
 
-    // checking to see if the game is over, if so, start fresh
+// checking to see if the game is over, if so, start fresh
 function completeChecker() {
     if (wins === 5) {
         alert(`You Are A Guess Master!`)
@@ -85,7 +85,7 @@ function completeChecker() {
         freshStart();
     }
 }
-    // resetting all relevant variables when the game starts over
+// resetting all relevant variables when the game starts over
 function freshStart() {
     totalScore = 0;
     wins = 0;
