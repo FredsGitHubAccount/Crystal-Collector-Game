@@ -46,7 +46,7 @@ function scoreUpdate() {
     // convert the data-value into a number and add the score of the respective crystal clicked
     totalScore = totalScore + (Number($(this).attr("data-value")));
     $("#total-score").text(`Total Score : ${totalScore}`);
-    $("#directions-text").text(`Good luck!`);
+    $("#directions-text").html(`<h2>Good luck! </h2>`);
     $("#popup").text(``);
     console.log(totalScore);
 
