@@ -54,7 +54,7 @@ function scoreUpdate() {
     if (totalScore === targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Good Job! Your Total Score Matched The Target Score!`);
-        alert("You Lose! Hit Space To Begin The Next Round")
+
         wins++;
         $("#wins-total").text(wins);
         startGame();
@@ -64,7 +64,7 @@ function scoreUpdate() {
     else if (totalScore > targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Nice Try, Your Guess Was ${totalScore}! You needed ${targetScore}!`);
-        alert("You Lose! Hit Space To Begin The Next Round");
+
         losses++;
         $("#losses-total").text(losses);
         startGame();
@@ -75,13 +75,13 @@ function scoreUpdate() {
 // checking to see if the game is over, if so, start fresh
 function completeChecker() {
     if (wins === 5) {
-        alert(`You Are A Guess Master!`)
-        $("#popup").text(`Click A Gem To Play Again!`);
+
+        $("#popup").html(`You Are A Guess Master!<br>Click A Gem To Play Again!`);
         freshStart();
     }
     else if (losses === 5) {
-        alert("Better Luck Next Time")
-        $("#popup").text(`Click A Gem To Play Again!`);
+
+        $("#popup").html(`You Lost! <br>Click A Gem To Play Again!`);
         freshStart();
     }
 }
