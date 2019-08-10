@@ -13,6 +13,7 @@ Open the live link at https://fredsgithubaccount.github.io/Crystal-Collector-Gam
 Front-End
 - [ ] HTML
 - [ ] CSS
+- [ ] JavaScript
 - [ ] JQuery
 
 
