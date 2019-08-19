@@ -1,4 +1,4 @@
-// global variables
+// Defining global variables
 
 let wins = 0;
 let losses = 0;
@@ -6,24 +6,24 @@ let buttonValues = [];
 let targetScore = 0;
 
 
-// defining startGame function
+// The function to start a new round
 
 function startGame() {
 
-    // resetting the score to zero
+    // Resetting the score to zero
     totalScore = 0;
 
-    // creating a random target score from 19-120
+    // Creating a random target score from 19-120
     targetScore = Math.floor(Math.random() * 101) + 19;
 
-    // updating text when startgame is called
+    // Updating text when startgame is called
     $("#total-score").text(`Total Score : ${totalScore}`);
     $("#wins-total").text(`Wins : ${wins}`);
     $("#losses-total").text(`Losses : ${losses}`);
     $("#target-score").text(`Target Score : ${targetScore}`);
 
 
-    // assign attributes for each crystal by using a four loop
+    // Assign attributes for each crystal by using a for loop
     buttonValues = [];
     for (let i = 0; i < 4; i++) {
 
@@ -40,17 +40,17 @@ function startGame() {
 
 }
 
-// whenever a crystal is clicked, update the score
+// Whenever a crystal is clicked, runs the score updated function
 function scoreUpdate() {
 
-    // convert the data-value into a number and add the score of the respective crystal clicked
+    // Convert the data-value into a number and add to the score based on the clicked crystal
     totalScore = totalScore + (Number($(this).attr("data-value")));
     $("#total-score").text(`Total Score : ${totalScore}`);
     $("#directions-text").html(`<h2>Good luck! </h2>`);
     $("#popup").text(``);
     console.log(totalScore);
 
-    // win condition
+    // Win condition
     if (totalScore === targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Good Job! Your Total Score Matched The Target Score!`);
@@ -60,7 +60,7 @@ function scoreUpdate() {
         startGame();
 
     }
-    // lose condition
+    // Lose condition
     else if (totalScore > targetScore) {
         $("#target-score").text(targetScore);
         $("#popup").text(`Nice Try, Your Guess Was ${totalScore}! You needed ${targetScore}!`);
@@ -72,7 +72,7 @@ function scoreUpdate() {
     }
 }
 
-// checking to see if the game is over, if so, start fresh
+// Checks to see if the user reached 5 wins or 5 losses
 function completeChecker() {
     if (wins === 5) {
 
@@ -85,7 +85,7 @@ function completeChecker() {
         freshStart();
     }
 }
-// resetting all relevant variables when the game starts over
+// Resetting all relevant variables when the game starts over
 function freshStart() {
     totalScore = 0;
     wins = 0;
