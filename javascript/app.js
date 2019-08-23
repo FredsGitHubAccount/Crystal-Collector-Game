@@ -92,7 +92,7 @@ function freshStart() {
     losses = 0;
     $("#wins-total").text(`Wins : ${wins}`);
     $("#losses-total").text(`Losses : ${losses}`);
-    $("#directions-text").html(`Each Diamond Has A Random Value. <br> Try To Match The Target Score Given The Random Values <br> Try To Get To 5 Wins Before 5 Losses!`);
+    $("#directions-text").html(`Each Diamond Has A Random Value. <br> Try To Match The Target Score Given The Random Values. <br> Try To Get To 5 Wins Before 5 Losses!`);
 
 }
 
